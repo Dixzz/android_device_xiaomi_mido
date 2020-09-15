@@ -406,3 +406,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+# GCam Go
+PRODUCT_PACKAGES += \
+    GCam
+
+# XiaomiParts
+PRODUCT_PACKAGES += \
+    XiaomiParts
