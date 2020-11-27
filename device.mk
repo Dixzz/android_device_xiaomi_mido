@@ -140,7 +140,7 @@ PRODUCT_PACKAGES += \
     camera.msm8953 \
     libmm-qcamera \
     libui_shim \
-    Snap
+    GCam
 
 # Consumerir
 PRODUCT_PACKAGES += \
@@ -286,7 +286,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
+    android.hardware.power@1.2-service-qti
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml \
@@ -414,3 +414,17 @@ PRODUCT_PACKAGES += \
 # XiaomiParts
 PRODUCT_PACKAGES += \
     XiaomiParts
+
+# Hardware
+PRODUCT_BOARD_PLATFORM := msm8996
+PRODUCT_USES_QCOM_HARDWARE := true
+
+# HALS
+SRC_AUDIO_HAL_DIR := hardware/qcom-caf/msm8996/audio
+SRC_DISPLAY_HAL_DIR := hardware/qcom-caf/msm8996/display
+SRC_MEDIA_HAL_DIR := hardware/qcom-caf/msm8996/media
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH) \
+    hardware/qcom-caf/msm8996
